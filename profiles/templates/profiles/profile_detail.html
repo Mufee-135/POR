@@ -1,0 +1,29 @@
+<!-- profiles/templates/profiles/profile_detail.html -->
+
+<h1>{{ profile.user.username }}'s Profile</h1>
+<p>{{ profile.bio }}</p>
+<h2>Skills</h2>
+<p>{{ profile.skills }}</p>
+<h2>Contact Details</h2>
+<p>{{ profile.contact_details }}</p>
+
+<h2>Portfolios</h2>
+<ul>
+    {% for portfolio in portfolios %}
+        <li>
+            <strong>{{ portfolio.title }}</strong>: {{ portfolio.description }} 
+            <a href="{{ portfolio.link }}">View Project</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<h2>Projects</h2>
+<ul>
+    {% for project in projects %}
+        <li>
+            <strong>{{ project.title }}</strong>: {{ project.description }} 
+            <a href="{{ project.link }}">View Project</a>
+            
+        </li>
+    {% endfor %}
+</ul>

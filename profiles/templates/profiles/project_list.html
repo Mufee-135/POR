@@ -1,0 +1,12 @@
+<!-- profiles/templates/projects/project_list.html -->
+
+<h1>Project Showcase</h1>
+<ul>
+    {% for project in projects %}
+        <li>
+            <strong>{{ project.title }}</strong>: {{ project.description }} 
+            <a href="{{ project.link }}">View Project</a>
+        
+        </li>
+    {% endfor %}
+</ul>
